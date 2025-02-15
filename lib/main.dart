@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Odoo Flutter',
+      title: 'Carollia',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: Obx(() => Get.find<AuthController>().isLoggedIn.value
           ? ProductListPage()

@@ -8,7 +8,7 @@ import '../controllers/auth_controller.dart';
 
 class ApiService {
   final Dio _dio = Dio(BaseOptions(
-    baseUrl: 'http://your-odoo-server.com',
+    baseUrl: '',
     connectTimeout: Duration(milliseconds: 5000),
     receiveTimeout: Duration(milliseconds: 3000),
   ));
@@ -126,9 +126,9 @@ class Product {
     return Product(
       name: json['name'],
       price: json['list_price']?.toDouble() ?? 0.0,
-      image: json['image_1920'] != null 
-          ? base64Decode(json['image_1920'].split(',').last)
-          : null,
+      // image: json['image_1920'] != null 
+      //     ? base64Decode(json['image_1920'].split(',').last)
+      //     : null,
     );
   }
 }
